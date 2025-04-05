@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CI4 + Vue Project</title>
+    <title>CI4 + jQuery Project</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -28,32 +28,32 @@
 
     <!-- Icons css -->
     <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css">
-
-
 </head>
 <body>
 
 <div class="wrapper">
 
-    <!-- Vue mount point -->
+    <!-- Content -->
     <div id="app">
-        <!-- Header -->
         <?php echo view('components/topbar'); ?>
         <?php echo view('components/sidebar'); ?>
         <?= $this->renderSection('content') ?>
-        <!-- Footer -->
         <?php echo view('components/footer'); ?>
     </div>
 
-
 </div>
 
-<!-- JS: Vue + Axios -->
-<script src="/assets/js/vue.global.prod.js"></script>
+<!-- JS: jQuery + Axios -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="/assets/js/axios.min.js"></script>
 
-<!-- Vue App -->
-<script type="module" src="/assets/js/app.js"></script>
+<!-- API helper -->
+<script src="/assets/js/api.js"></script> <!-- Quan trọng! ✅ -->
+
+<script src="/assets/js/app-init.js"></script>
+
+<!-- Các section JS riêng -->
+<?= $this->renderSection('scripts') ?>
 
 
 
@@ -71,9 +71,6 @@
 <script src="/assets/js/jsvectormap.min.js"></script>
 <script src="/assets/js/world-merc.js"></script>
 <script src="/assets/js/world.js"></script>
-
-<!-- Dashboard App js -->
-<script src="/assets/js/demo.dashboard.js"></script>
 
 <!-- App js -->
 <script src="/assets/js/app.min.js"></script>

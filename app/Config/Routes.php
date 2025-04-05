@@ -25,5 +25,5 @@ $routes->get('register', 'Auth::register');
 $routes->post('register', 'Auth::register');
 $routes->get('scan/(:num)', 'Scan::index/$1');
 $routes->get('qrcode', 'QrCode::index');
-$routes->get('qrcode/create', 'QrCode::create');
-$routes->post('qrcode/store', 'QrCode::store');
+$routes->get('qrcode/create', 'QrCodeController::create');
+$routes->post('qrcode/store', 'QrCodeController::store');

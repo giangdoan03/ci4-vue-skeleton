@@ -17,9 +17,10 @@
 
     <!-- Icons css -->
     <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-
 </head>
+
 <body class="authentication-bg position-relative">
+
 <div class="position-absolute start-0 end-0 start-0 bottom-0 w-100 h-100">
     <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 800">
         <g fill-opacity="0.22">
@@ -32,7 +33,7 @@
     </svg>
 </div>
 
-<!-- Vue mount point -->
+<!-- Content -->
 <div id="app">
     <?= $this->renderSection('content') ?>
 </div>
@@ -41,19 +42,24 @@
     2018 - <script>document.write(new Date().getFullYear())</script> © Hyper - Coderthemes.com
 </footer>
 
-<!-- JS: Vue + Axios -->
-<script src="/assets/js/vue.global.prod.js"></script>
+<!-- JS: jQuery + Axios -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="/assets/js/axios.min.js"></script>
 
-<!-- Vue App -->
-<script type="module" src="/assets/js/app.js"></script>
+<!-- API helper -->
+<script src="/assets/js/api.js"></script>
+
+<!-- Inject scripts từ view con -->
+<?= $this->renderSection('scripts') ?>
+
+<!-- App JS -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="/assets/js/app.min.js"></script>
 
 <!-- Vector Map Js -->
 <script src="/assets/js/jsvectormap.min.js"></script>
 <script src="/assets/js/world-merc.js"></script>
 <script src="/assets/js/world.js"></script>
-
-
 
 </body>
 </html>
